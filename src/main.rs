@@ -22,6 +22,16 @@ impl Rectangle {
     }
 }
 
+// associated function
+impl Rectangle {
+    fn square(size: u32) -> Self {
+        Self {
+            width: size,
+            height: size,
+        }
+    }
+}
+
 fn main() {
     let rect1 = Rectangle {
         width: 30,
@@ -46,4 +56,9 @@ fn main() {
     // can hold
     println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
     println!("Can rect1 hold rect3? {}", rect1.can_hold(&rect3));
+
+    // associated function
+    let sq = Rectangle::square(3);
+    println!("sq: {:?}", sq); // sq: Rectangle { width: 3, height: 3 }
+    println!("sq: {:#?}", sq.area());
 }
