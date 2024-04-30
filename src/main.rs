@@ -26,5 +26,5 @@ fn main() {
     println!("The area of the rectangle is {} square pixels.", rect1.area());
 
     // call width method
-    println!("The rectangle has a nonzero width: {}", rect1.width());
+    println!("The rectangle has a nonzero width: {} {}", rect1.width(), rect1.width);
 }
