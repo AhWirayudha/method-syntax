@@ -10,6 +10,11 @@ impl Rectangle {
     fn area(&self) -> u32 { // self is a reference to Rectangle, &self is short of self: &Self
         self.width * self.height
     }
+
+    // we can name it same as the struct
+    fn width(&self) -> bool {
+        self.width > 0
+    }
 }
 
 fn main() {
@@ -19,4 +24,7 @@ fn main() {
     };
 
     println!("The area of the rectangle is {} square pixels.", rect1.area());
+
+    // call width method
+    println!("The rectangle has a nonzero width: {}", rect1.width());
 }
