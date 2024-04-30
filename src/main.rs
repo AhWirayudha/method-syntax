@@ -22,7 +22,7 @@ impl Rectangle {
     }
 }
 
-// associated function
+// associated function, and multiple impl blocks
 impl Rectangle {
     fn square(size: u32) -> Self {
         Self {
